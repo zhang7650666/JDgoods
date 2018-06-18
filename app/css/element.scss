@@ -1,0 +1,39 @@
+@charset "UTF-8";
+@import "./layout.scss";
+
+@mixin btn($size:14px,$color:#fff,$bgColor:#f04752,$padding:5px,$radius:5px){
+    font-size:$size;
+    color:$color;
+    background-color:$bgColor;
+    padding:$padding;
+    radius:$radius;
+    border:1px solie $bgColor;
+    text-align: center;
+    line-height:1;
+    display:inline-block;
+}
+
+@mixin list($direction:column){
+    @include flex($direction)
+}
+
+@mixin panel($bgColor:#fff,$padding:0px,$margin:20px 0,$height:112px,$txtPadding:0 32px,$color:#333,$size:32px){
+    
+    padding:$padding;
+    margin:$margin;
+    background-color: $bgColor;
+    >h4{
+        height:$height;
+        line-height:$height;
+        padding:$txtPadding;
+        font-size:$size;
+        color:$color;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+        overflow:hidden;
+        text-align: center;
+    }
+    
+
+
+}
